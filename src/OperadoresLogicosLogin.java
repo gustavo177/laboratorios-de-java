@@ -32,17 +32,27 @@ public class OperadoresLogicosLogin {
         boolean esAutenticado = false;
 
         for (int i = 0; i < usernames.length; i++){
+            // aplicando operador ternario
+            esAutenticado = ( usernames[i].equals(u) && passwords[i].equals(p) ? true : esAutenticado);
+            /*
             if( (usernames[i].equals(u) && passwords[i].equals(p)) ){
                 esAutenticado=true;
                 break;
             }
+            */
         }
+        // aplicando operador ternario
+        String mensaje=esAutenticado ? "Bienvenido usuario ".concat(u).concat("!") :
+                "Username o password incorrectos!\nLo sentimos, requiere autenticación";
+        System.out.println("mensaje = " + mensaje);
 
+        /*
         if(esAutenticado){
             System.out.println("Bienvenido usuario ".concat(u).concat("!"));
         } else {
-            System.out.println("Username o password incorrectos");
-            System.out.println("Lo siento requiere autenticación");
+            System.out.println("Username o password incorrectos!");
+            System.out.println("Lo sentimos, requiere autenticación");
         }
+        */
     }
 }

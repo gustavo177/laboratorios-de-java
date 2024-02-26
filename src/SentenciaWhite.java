@@ -31,7 +31,5 @@ public class SentenciaWhite {
             System.out.println("i = " + i);
             i++;
         } while (prueba);
-
-
     }
 }
